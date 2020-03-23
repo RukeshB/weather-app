@@ -1,0 +1,19 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #30475e;
+}
+.content {
+	background-color: whitesmoke;
+	border-radius: 50px;
+	width: 200px;
+	margin: auto;
+	text-align: center;
+}
+
+.header {
+	align-content: center;
+}
+
+.summery {
+}
