@@ -2,7 +2,7 @@ lat = 27.7172;
 lon = 85.324;
 PROXY = 'https://cors-anywhere.herokuapp.com/';
 KEY = '745b58dd5128d154a9f92fb1a9c31630';
-URL = PROXY + 'https://api.darksky.net/forecast/745b58dd5128d154a9f92fb1a9c31630/' + lat + ',' + lon;
+URL = PROXY + 'https://api.darksky.net/forecast/' + KEY + '/' + lat + ',' + lon;
 
 // var KEY = '5f159a7c3e29ef06835a23529b46607b';
 // var LOCATION = 'KATHMANDU';

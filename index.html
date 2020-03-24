@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="content" id="app">
         <div class="title">
-            <h1>Today's Weather</h1>
+            <h1>Current Weather</h1>
         </div>
         <div class="header">
             <div class="location">
                 <h1>{{weathers.timezone}}</h1>
             </div>
-            
+
             <div class="icon">
                 <canvas class="icon1" width="128" height="128"></canvas>
                 <h2>{{weathers.currentSummary}}</h2>
             </div>
         </div>
-        
+
         <div class="summery">
             <h1>{{weathers.temperatureInF}}<sup>°</sup>F / {{weathers.temperatureInC}}<sup>°</sup>C</h1>
             <h3> {{weathers.summary}}</h3>
@@ -32,4 +34,5 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="skycons.js"></script>
 <script src="weather.js"></script>
+
 </html>
