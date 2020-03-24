@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="content" id="app">
+        <div class="title">
+            <h1>Today's Weather</h1>
+        </div>
         <div class="header">
             <div class="location">
                 <h1>{{weathers.timezone}}</h1>
@@ -15,12 +18,12 @@
             
             <div class="icon">
                 <canvas class="icon1" width="128" height="128"></canvas>
-                <h3>{{weathers.currentSummary}}</h3>
+                <h2>{{weathers.currentSummary}}</h2>
             </div>
         </div>
         
         <div class="summery">
-            <h1>{{weathers.temperature}}</h1>
+            <h1>{{weathers.temperatureInF}}<sup>°</sup>F / {{weathers.temperatureInC}}<sup>°</sup>C</h1>
             <h3> {{weathers.summary}}</h3>
         </div>
     </div>

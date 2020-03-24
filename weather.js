@@ -16,16 +16,26 @@ var app1 = new Vue({
 	mounted() {
 		axios.get(URL).then((response) => {
 			icon = response.data.currently.icon;
-			icon_array = icon.split('-');
+			icon_array = icon.split('-'); //seperating string by -
 			new_icon = icon_array.join('_').toUpperCase();
+
+			//coverting fahrenheit to celsius
+			fTemp = response.data.currently.temperature;
+			cTemp = (fTemp - 32) * (5 / 9);
+
+			//setting weather data in a array
 			this.weathers = {
 				timezone       : response.data.timezone,
 				icon           : new_icon,
-				temperature    : response.data.currently.temperature,
+				temperatureInF : fTemp,
+				temperatureInC : cTemp.toFixed(2),
 				currentSummary : response.data.currently.summary,
 				summary        : response.data.hourly.summary
 			};
+
+			//setting icon
 			setIcons(new_icon, document.querySelector('.icon1'));
+
 			console.log(this.weathers);
 			console.log(response.data);
 		});

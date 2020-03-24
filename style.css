@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body {
 	margin: 0;
 	padding: 0;
 	background-color: #30475e;
 	color: whitesmoke;
+	font-family: 'Roboto', sans-serif;
 }
 .content {
 	margin: auto;
-	margin-top: 200px;
+	margin-top: 25vh;
 	text-align: center;
 	/* display: inline-block; */
 }
 
+.title {
+	font-size: large;
+}
 .header {
 	display: inline-block;
 	width: 100vh;
