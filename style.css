@@ -2,18 +2,31 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #30475e;
+	color: whitesmoke;
 }
 .content {
-	background-color: whitesmoke;
-	border-radius: 50px;
-	width: 200px;
 	margin: auto;
+	margin-top: 200px;
 	text-align: center;
+	/* display: inline-block; */
 }
 
 .header {
-	align-content: center;
+	display: inline-block;
+	width: 100vh;
+}
+
+.location {
+	float: left;
+	padding: 10 10 10 10;
+	margin-top: 30px;
+}
+
+.icon {
+	float: right;
+	padding: 10 10 10 10;
 }
 
 .summery {
+	width: 100%;
 }

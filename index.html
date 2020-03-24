@@ -8,18 +8,21 @@
 </head>
 <body>
     <div class="content" id="app">
-        
-            <div class="header">
+        <div class="header">
+            <div class="location">
                 <h1>{{weathers.timezone}}</h1>
-                <canvas class="icon1" width="128" height="128"></canvas>icon
             </div>
-            <div class="summery">
-                <h2 id="tem">{{weathers.temperature}}</h2>
-                <h3 id="summery">{{weathers.summary}}</h3>
-                <h3></h3>
+            
+            <div class="icon">
+                <canvas class="icon1" width="128" height="128"></canvas>
+                <h3>{{weathers.currentSummary}}</h3>
             </div>
+        </div>
         
-        
+        <div class="summery">
+            <h1>{{weathers.temperature}}</h1>
+            <h3> {{weathers.summary}}</h3>
+        </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

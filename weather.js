@@ -1,7 +1,13 @@
 lat = 27.7172;
 lon = 85.324;
 PROXY = 'https://cors-anywhere.herokuapp.com/';
+KEY = '745b58dd5128d154a9f92fb1a9c31630';
 URL = PROXY + 'https://api.darksky.net/forecast/745b58dd5128d154a9f92fb1a9c31630/' + lat + ',' + lon;
+
+// var KEY = '5f159a7c3e29ef06835a23529b46607b';
+// var LOCATION = 'KATHMANDU';
+// URL = 'http://api.openweathermap.org/data/2.5/weather?q=' + LOCATION + '&appid=' + KEY;
+
 var app1 = new Vue({
 	el      : '#app',
 	data    : {
@@ -13,10 +19,11 @@ var app1 = new Vue({
 			icon_array = icon.split('-');
 			new_icon = icon_array.join('_').toUpperCase();
 			this.weathers = {
-				timezone    : response.data.timezone,
-				icon        : new_icon,
-				temperature : response.data.currently.temperature,
-				summary     : response.data.currently.summary
+				timezone       : response.data.timezone,
+				icon           : new_icon,
+				temperature    : response.data.currently.temperature,
+				currentSummary : response.data.currently.summary,
+				summary        : response.data.hourly.summary
 			};
 			setIcons(new_icon, document.querySelector('.icon1'));
 			console.log(this.weathers);
@@ -26,7 +33,10 @@ var app1 = new Vue({
 });
 
 function setIcons(icon, iconid) {
-	SKYCONS = new Skycons({ color: 'black' });
-	SKYCONS.play();
-	return SKYCONS.set('icon1', SKYCONS[icon]);
+	//console.log(icon);
+	var skycons = new Skycons({ color: 'white' });
+	skycons.play();
+	//skyconIcon = 'Skycons.' + icon;
+	//console.log(skyconIcon);
+	return skycons.set(iconid, Skycons[icon]);
 }
